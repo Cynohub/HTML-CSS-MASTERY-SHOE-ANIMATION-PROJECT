@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+</head>
+<body>
+    <div class="circle"></div>
+    <div>
+        <img class="image" src="./shoe.png" alt="">
+    </div>
+    
+</body>
+</html>
+
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+    body{
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('./ddddd.png');
+        background-size: cover;
+        /* animation: backgrou 1s ease-in-out alternate-reverse infinite; */
+    }
+    .circle{
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+        position: absolute;
+        z-index: -1;
+        animation: rotate 5s infinite ease;
+    }
+    .image{
+        height: 50vh;
+        animation: floating 2s ease infinite;
+        /* filter: grayscale(100%); */
+    }
+
+
+    @keyframes floating{
+        0%{
+            transform: translateY(-20px);
+        }
+        50%{
+            transform: translateY(20px);
+        }
+        100%{
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes falldown{
+        0%{
+            transform: translateY(-500%);
+        }
+        40%{
+            transform: translateY(0%);
+        }
+        80%{
+            transform: translateY(-5%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+
+    }
+
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+            
+            /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+        }
+        25%{
+            /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+            /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+        }
+        50%{
+            transform: rotate(180deg);
+            /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+            /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+        }
+        75%{
+            /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+            /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+        }
+        100%{
+            transform: rotate(0deg);
+            /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+            /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+        }
+    }
+
+    @keyframes float{
+        0%{
+            transform: translatey(0);
+            filter: grayscale(0%);
+        }
+        50%{
+            transform: translatey(-20px);
+            filter: grayscale(100%);
+        }
+        100%{
+            transform: translatey(0);
+            filter: grayscale(0%);
+        }
+    }
+
+
+    @keyframes backgrou{
+        0%{
+            background: white;
+            background-image: url('./ddddd.png');
+            background-size: cover;
+        }
+        100%{
+            background: #212121;
+            background-image: url('./assets/Lines\ with\ details.png');
+            background-size: cover;
+        }
+    }
+
+
+
+</style>
